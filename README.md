@@ -371,7 +371,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row gap-12 items-center">
                 <div class="lg:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1600880292203-75707162d9ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Farm family" class="rounded-lg shadow-xl w-full">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/SnowBarn.jpg?raw=true" alt="Farm family" class="rounded-lg shadow-xl w-full">
                 </div>
                 <div class="lg:w-1/2">
                     <h2 class="text-3xl font-bold mb-6">Our Farm Story</h2>
