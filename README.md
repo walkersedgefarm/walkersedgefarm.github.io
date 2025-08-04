@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Sunset.jpg') ;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), <IMG src="https://rawgithubusercontent.com/walkersedgefarm/walkersedgefarm.github.io/main/Sunset.jpg" alt="Sunset" ;
             background-size: cover;
             background-position: center;
         }
