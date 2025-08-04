@@ -246,7 +246,7 @@
                             <i class="fab fa-instagram text-4xl mb-2"></i>
                             <h3 class="text-xl font-semibold mb-2">Follow Our Daily Farm Life</h3>
                             <p class="mb-4">See more of our animals and farm activities on Instagram</p>
-                            <a href="https://www.instagram.com/walkersedgefarm" target="_blank" class="bg-white text-pink-500 px-4 py-2 rounded-lg font-semibold inline-block">@walkersedgefarm</a>
+                            <a href="https://www.instagram.com/walkers_edge_farm" target="_blank" class="bg-white text-pink-500 px-4 py-2 rounded-lg font-semibold inline-block">@walkersedgefarm</a>
                         </div>
                     </div>
                 </div>
