@@ -3,11 +3,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walker's Edge Farm | Family Farm Since 2024</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -79,7 +79,7 @@
                     <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Farm fresh eggs" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Farm Fresh Eggs</h3>
-                        <p class="text-gray-600 mb-4">Our free-range chickens and ducks produce the most flavorful eggs you'll ever taste. Available in various sizes and colors.</p>
+                        <p class="text-gray-600 mb-4">Our pasture raised chickens and ducks produce the most flavorful eggs you'll ever taste. Available in various sizes and colors.</p>
                         <div class="flex justify-between items-center">
                             <span class="font-bold text-green-800">$5 - $8 per dozen</span>
                             <a href="#order" class="text-green-600 hover:text-green-800 font-semibold">Order Now</a>
@@ -89,7 +89,7 @@
                 
                 <!-- Highland Cattle -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="https://images.unsplash.com/photo-1633944099792-7a1d5d8a8c0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Highland cattle" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1583337427000-7c20f5ca3546?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Highland cattle" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Highland Cattle</h3>
                         <p class="text-gray-600 mb-4">Our Scottish Highland cattle are raised with care on open pastures. Available as breeding stock or for meat.</p>
@@ -126,6 +126,19 @@
                     </div>
                 </div>
                 
+                <!-- Pigs -->
+                <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1561763438-1741e86986a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Kunekune pigs" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-700">Kunekune Pigs</h3>
+                        <p class="text-gray-600 mb-4">Our friendly Kunekune pigs are a heritage breed from New Zealand, known for their docile nature and grazing ability. They produce excellent marbled pork.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-800">Breeding stock & pork available</span>
+                            <a href="#contact" class="text-green-600 hover:text-green-800 font-semibold">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Pumpkins -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
                     <img src="https://images.unsplash.com/photo-1509664158689-2c86d0a07979?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Pumpkins" class="w-full h-64 object-cover">
@@ -139,18 +152,6 @@
                     </div>
                 </div>
                 
-                <!-- Farm Tours -->
-                <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="https://images.unsplash.com/photo-1500380804539-4e1e8c1e7118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Farm tour" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-green-700">Farm Experiences</h3>
-                        <p class="text-gray-600 mb-4">Schedule a tour to meet our animals, learn about sustainable farming, and enjoy the countryside.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-green-800">$15 per person</span>
-                            <a href="#contact" class="text-green-600 hover:text-green-800 font-semibold">Book a tour</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -165,7 +166,7 @@
                     <img src="https://images.unsplash.com/photo-1596703264279-5be29518770f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Chickens" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Egg-Laying Chickens</h3>
-                        <p class="text-gray-600 mb-4">Our diverse flock includes Rhode Island Reds, Barred Rocks, and Ameraucanas, all free to roam and forage naturally.</p>
+                        <p class="text-gray-600 mb-4">Our diverse flock includes Rhode Island Reds, Barred Rocks, and Ameraucanas, all pasture raised to forage naturally.</p>
                         <div class="flex items-center text-yellow-500">
                             <i class="fas fa-egg mr-1"></i>
                             <span class="text-gray-700 ml-1">Producing 20+ dozen eggs weekly</span>
@@ -175,10 +176,10 @@
                 
                 <!-- Ducks -->
                 <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1551524839-462dd408c54d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ducks" class="w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Ducks" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Ducks</h3>
-                        <p class="text-gray-600 mb-4">Our Khaki Campbell and Pekin ducks provide rich, flavorful eggs and help control pests in our ponds.</p>
+                        <p class="text-gray-600 mb-4">Our Runner, Ancona, and Mallard ducks provide rich, flavorful eggs and help control pests in our ponds.</p>
                         <div class="flex items-center text-yellow-500">
                             <i class="fas fa-egg mr-1"></i>
                             <span class="text-gray-700 ml-1">Duck eggs available weekly</span>
@@ -225,6 +226,19 @@
                     </div>
                 </div>
                 
+                <!-- Pigs -->
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1561763438-1741e86986a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Heritage breed pigs" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-700">Kunekune Pigs</h3>
+                        <p class="text-gray-600 mb-4">Our Kunekune pigs thrive on pasture, using their short upturned snouts for grazing rather than rooting. Their friendly personalities make them a farm favorite.</p>
+                        <div class="flex items-center text-pink-500">
+                            <i class="fas fa-paw mr-1"></i>
+                            <span class="text-gray-700 ml-1">Breeding stock & pork available</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Instagram Feed -->
                 <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
                     <div class="h-64 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white">
@@ -272,15 +286,26 @@
                             <label for="quantity" class="block text-gray-700 mb-1">Quantity</label>
                             <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
                         </div>
-                        <div>
+                        <div class="flex items-center mb-4">
+                            <input type="checkbox" id="delivery-toggle" name="delivery" class="mr-2 h-5 w-5">
+                            <label for="delivery-toggle" class="text-gray-700">Check for Delivery</label>
+                        </div>
+                        <div id="pickup-date-container">
                             <label for="pickup-date" class="block text-gray-700 mb-1">Preferred Pickup Date</label>
                             <input type="date" id="pickup-date" name="pickup-date" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div id="delivery-date-container" class="hidden">
+                            <label for="delivery-date" class="block text-gray-700 mb-1">Preferred Delivery Date</label>
+                            <input type="date" id="delivery-date" name="delivery-date" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
                         </div>
                         <div>
                             <label for="notes" class="block text-gray-700 mb-1">Special Requests</label>
                             <textarea id="notes" name="notes" rows="3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition">Submit Order</button>
+                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition mb-4">Cash Order</button>
+                        <a href="https://www.paypal.com/ncp/payment/MYETDXRGGTS4J" target="_blank" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition flex items-center justify-center">
+                            <i class="fab fa-paypal mr-2"></i> Pay with PayPal
+                        </a>
                     </form>
                 </div>
                 <div class="lg:w-1/2">
@@ -298,14 +323,14 @@
                                 <i class="fas fa-map-marker-alt text-green-600 mt-1 mr-3"></i>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Pickup Location</h4>
-                                    <p class="text-gray-600">Farm pickup only at Walker's Edge Farm, 123 Rural Route, Countryside, ST 12345</p>
+                                    <p class="text-gray-600">Farm pickup only at Walker's Edge Farm, 4120 West 295th Street, Louisburg, KS 66053</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
                                 <i class="fas fa-clock text-green-600 mt-1 mr-3"></i>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Pickup Hours</h4>
-                                    <p class="text-gray-600">Monday-Friday: 3pm-6pm<br>Saturday: 9am-12pm<br>Closed Sundays</p>
+                                    <p class="text-gray-600">Monday-Friday: 5pm-7pm<br>Saturday: 9am-12pm<br> Sundays:9am-12am</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -319,7 +344,7 @@
                                 <i class="fas fa-dollar-sign text-green-600 mt-1 mr-3"></i>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Payment</h4>
-                                    <p class="text-gray-600">Cash or check accepted at pickup. Credit cards may be arranged in advance.</p>
+                                    <p class="text-gray-600">Cash, Venmo, or Paypal accepted at pickup.</p>
                                 </div>
                             </div>
                         </div>
@@ -346,7 +371,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row gap-12 items-center">
                 <div class="lg:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Farm family" class="rounded-lg shadow-xl w-full">
+                    <img src="https://images.unsplash.com/photo-1600880292203-75707162d9ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Farm family" class="rounded-lg shadow-xl w-full">
                 </div>
                 <div class="lg:w-1/2">
                     <h2 class="text-3xl font-bold mb-6">Our Farm Story</h2>
@@ -370,16 +395,13 @@
                     <div class="mt-8">
                         <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
                         <div class="flex space-x-4">
-                            <a href="https://www.instagram.com/walkersedgefarm" target="_blank" class="bg-pink-600 hover:bg-pink-700 w-10 h-10 rounded-full flex items-center justify-center text-white">
+                            <a href="https://www.instagram.com/walkers_edge_farm" target="_blank" class="bg-pink-600 hover:bg-pink-700 w-10 h-10 rounded-full flex items-center justify-center text-white">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center text-white">
-                                <i class="fab fa-facebook-f"></i>
+                            <a href="https://www.facebook.com/people/Walkers-Edge-Farm/61564915550157/?ref=_xav_ig_profile_page_web#" target="_blank" class="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center text-white">
+                                <i class="fab fa-facebook-f"></i>                      
                             </a>
-                            <a href="#" class="bg-gray-800 hover:bg-black w-10 h-10 rounded-full flex items-center justify-center text-white">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                            <a href="#" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center text-white">
+                            <a href="walkersedgefarm@gmail.com" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center text-white">
                                 <i class="fas fa-envelope"></i>
                             </a>
                         </div>
@@ -468,14 +490,7 @@
                                 <i class="fas fa-map-marker-alt text-green-600 mt-1 mr-3"></i>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Address</h4>
-                                    <p class="text-gray-600">123 Rural Route<br>Countryside, ST 12345</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-phone-alt text-green-600 mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Phone</h4>
-                                    <p class="text-gray-600">(123) 456-7890</p>
+                                    <p class="text-gray-600">4120 West 295th Street<br>Louisburg, KS 66053</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -489,23 +504,25 @@
                                 <i class="fas fa-clock text-green-600 mt-1 mr-3"></i>
                                 <div>
                                     <h4 class="font-semibold text-gray-800">Farm Stand Hours</h4>
-                                    <p class="text-gray-600">Wednesday-Friday: 3pm-6pm<br>Saturday: 9am-12pm</p>
+                                    <p class="text-gray-600">Coming Soon</p>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-8">
                             <h3 class="text-xl font-semibold mb-4 text-green-700">Follow Our Journey</h3>
                             <p class="mb-4 text-gray-600">For daily farm updates, animal photos, and product availability:</p>
-                            <a href="https://www.instagram.com/walkersedgefarm" target="_blank" class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg">
+                            <a href="https://www.instagram.com/walkers_edge_farm" target="_blank" class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg">
                                 <i class="fab fa-instagram mr-2"></i>
-                                @walkersedgefarm
+                                @walkers_edge_farm
                             </a>
                         </div>
                     </div>
                     <div class="md:w-1/2">
+                        <h3 class="text-xl font-semibold mb-4 text-green-700">Our Location</h3>
                         <div class="bg-gray-100 p-4 rounded-lg h-full">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256018566!2d-73.9878449245375!3d40.74844097138985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689878817583!5m2!1sen!2sus" width="100%" height="100%" style="min-height: 300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3099.187116199113!2d-94.715309!3d38.620833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f7c5d8c4c6e5%3A0x3e3e3e3e3e3e3e3e!2s4120%20W%20295th%20St%2C%20Louisburg%2C%20KS%2066053!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="100%" style="min-height: 300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg"></iframe>
                         </div>
+                        <p class="mt-4 text-gray-600">We welcome visitors by appointment. Please contact us to schedule a farm tour!</p>
                     </div>
                 </div>
             </div>
@@ -554,29 +571,87 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Form submission
-        document.getElementById('egg-order-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
+        // Form submission handler
+        function submitOrder(paymentMethod) {
+            const form = document.getElementById('egg-order-form');
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
             const eggType = document.getElementById('egg-type').value;
             const quantity = document.getElementById('quantity').value;
+            const notes = document.getElementById('notes').value;
+            const isDelivery = document.getElementById('delivery-toggle').checked;
+            const date = isDelivery ? document.getElementById('delivery-date').value : document.getElementById('pickup-date').value;
             
-            // Simple validation
             if(name && email && eggType && quantity) {
-                // In a real application, you would send this data to your server
-                alert(`Thank you, ${name}! Your order for ${quantity} ${eggType} has been received. We'll email confirmation to ${email}.`);
+                // Construct email body
+                const subject = `New Egg Order - ${name}`;
+                const body = `New order received:
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Egg Type: ${eggType}
+Quantity: ${quantity}
+${isDelivery ? 'Delivery' : 'Pickup'} Date: ${date}
+Payment Method: ${paymentMethod}
+Notes: ${notes || 'None'}`;
+
+                // Create hidden form to submit via email
+                const emailForm = document.createElement('form');
+                emailForm.action = 'https://formsubmit.co/walkersedgefarm@gmail.com';
+                emailForm.method = 'POST';
+                emailForm.target = '_blank';
                 
-                // Reset form
-                this.reset();
+                // Add hidden inputs
+                const addInput = (name, value) => {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = name;
+                    input.value = value;
+                    emailForm.appendChild(input);
+                };
+                
+                addInput('_subject', subject);
+                addInput('name', name);
+                addInput('email', email);
+                addInput('phone', phone);
+                addInput('eggType', eggType);
+                addInput('quantity', quantity);
+                addInput('deliveryMethod', isDelivery ? 'Delivery' : 'Pickup');
+                addInput('date', date);
+                addInput('paymentMethod', paymentMethod);
+                addInput('notes', notes || 'None');
+                
+                // Append and submit form
+                document.body.appendChild(emailForm);
+                emailForm.submit();
+                document.body.removeChild(emailForm);
+                
+                // Show confirmation
+                alert(`Thank you, ${name}! Your order for ${quantity} ${eggType} has been received. We'll contact you to confirm.`);
+                
+                // Reset form if this was a cash order
+                if (paymentMethod === 'Cash') {
+                    form.reset();
+                }
             } else {
                 alert('Please fill out all required fields.');
             }
+        }
+
+        // Form submission handlers
+        document.getElementById('egg-order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitOrder('Cash');
         });
 
-        // Set minimum date for order pickup (tomorrow)
+        // PayPal button handler - just opens PayPal
+        document.querySelector('a[href*="paypal"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open(this.href, '_blank');
+        });
+
+        // Set minimum date for order pickup/delivery (tomorrow)
         const today = new Date();
         const tomorrow = new Date(today);
         tomorrow.setDate(tomorrow.getDate() + 1);
@@ -587,6 +662,18 @@
         
         const minDate = yyyy + '-' + mm + '-' + dd;
         document.getElementById('pickup-date').setAttribute('min', minDate);
+        document.getElementById('delivery-date').setAttribute('min', minDate);
+
+        // Delivery toggle handler
+        document.getElementById('delivery-toggle').addEventListener('change', function() {
+            const isDelivery = this.checked;
+            document.getElementById('pickup-date-container').classList.toggle('hidden', isDelivery);
+            document.getElementById('delivery-date-container').classList.toggle('hidden', !isDelivery);
+            
+            // Make the appropriate date field required
+            document.getElementById('pickup-date').required = !isDelivery;
+            document.getElementById('delivery-date').required = isDelivery;
+        });
     </script>
 </body>
 </html>
