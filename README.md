@@ -215,7 +215,7 @@
                 
                 <!-- Farm Dogs -->
                 <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Farm dogs" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Cooper.jpg?raw=true" alt="Farm dogs" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Farm Guardians</h3>
                         <p class="text-gray-600 mb-4">Our livestock guardian dogs work tirelessly to protect all the animals from predators.</p>
