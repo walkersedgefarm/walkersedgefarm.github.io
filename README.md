@@ -141,7 +141,7 @@
 
                 <!-- Pumpkins -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="https://images.unsplash.com/photo-1509664158689-2c86d0a07979?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Pumpkins" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Pumpkins.jpg?raw=true" alt="Pumpkins" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Pumpkins</h3>
                         <p class="text-gray-600 mb-4">Available in fall, we grow a variety of pumpkins perfect for carving, baking, or decorating.</p>
