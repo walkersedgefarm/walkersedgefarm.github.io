@@ -115,7 +115,7 @@
                 
                 <!-- Vegetables -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Fresh vegetables" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Zucchini.jpg?raw=true" alt="Fresh vegetables" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Seasonal Vegetables</h3>
                         <p class="text-gray-600 mb-4">Grown without synthetic pesticides, our vegetables are packed with flavor and nutrition. Availability varies by season.</p>
