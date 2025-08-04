@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/95588811b839ebbd8e2a63913f6c7ce9d8386fd0/Sunset.jpg" alt="Sunset.jpg"> ;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Sunset.jpg?raw=true');
             background-size: cover;
             background-position: center;
         }
@@ -76,7 +76,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Egg Products -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Farm fresh eggs" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Eggs.jpg?raw=true" alt="Farm fresh eggs" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Farm Fresh Eggs</h3>
                         <p class="text-gray-600 mb-4">Our pasture raised chickens and ducks produce the most flavorful eggs you'll ever taste. Available in various sizes and colors.</p>
@@ -89,7 +89,7 @@
                 
                 <!-- Highland Cattle -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="https://images.unsplash.com/photo-1583337427000-7c20f5ca3546?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Highland cattle" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Cows.jpg?raw=true" alt="Highland cattle" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Highland Cattle</h3>
                         <p class="text-gray-600 mb-4">Our Scottish Highland cattle are raised with care on open pastures. Available as breeding stock or for meat.</p>
@@ -102,7 +102,7 @@
                 
                 <!-- Myotonic Goats -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/2ee6a9d2046fd01a11f559b1e0503fe1aaff7db2/Goats.jpg" alt="Myotonic goats" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Goats.jpg?raw=true" alt="Myotonic goats" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Myotonic Goats</h3>
                         <p class="text-gray-600 mb-4">Also known as "fainting goats," our myotonic goats are excellent for brush control and make great pets or livestock.</p>
@@ -189,7 +189,7 @@
                 
                 <!-- Highland Cattle -->
                 <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1633944099792-7a1d5d8a8c0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Highland cattle" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Cows.jpg?raw=true" alt="Highland cattle" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Highland Cattle</h3>
                         <p class="text-gray-600 mb-4">These shaggy, gentle giants are perfectly adapted to our climate and help maintain our pastures naturally.</p>
@@ -202,7 +202,7 @@
                 
                 <!-- Myotonic Goats -->
                 <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1551410224-699683e15636?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Myotonic goats" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Goats.jpg?raw=true" alt="Myotonic goats" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Myotonic Goats</h3>
                         <p class="text-gray-600 mb-4">Our "fainting goats" are a constant source of entertainment while helping us maintain brush control.</p>
@@ -549,8 +549,9 @@
                 </div>
             </div>
             <div class="border-t border-green-800 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-green-300 text-sm mb-4 md:mb-0">© 2024 Walker's Edge Farm. All rights reserved.</p>
                 <div class="flex space-x-4">
-                    <a href="https://www.instagram.com/walkersedgefarm" target="_blank" class="text-green-300 hover:text-white">
+                    <a href="https://www.instagram.com/walkers_edge_farm" target="_blank" class="text-green-300 hover:text-white">
                         <i class="fab fa-instagram text-xl"></i>
                     </a>
                     <a href="#" class="text-green-300 hover:text-white">
