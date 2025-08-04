@@ -128,7 +128,7 @@
                 
                 <!-- Pigs -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Goats.jpg?raw=true" alt="Kunekune Pigs" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Pigs.jpg?raw=true" alt="Kunekune Pigs" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Kunekune Pigs</h3>
                         <p class="text-gray-600 mb-4">Our friendly Kunekune pigs are a heritage breed from New Zealand, known for their docile nature and grazing ability. They produce excellent marbled pork.</p>
