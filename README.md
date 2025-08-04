@@ -169,14 +169,14 @@
                         <p class="text-gray-600 mb-4">Our diverse flock includes Rhode Island Reds, Barred Rocks, and Ameraucanas, all pasture raised to forage naturally.</p>
                         <div class="flex items-center text-yellow-500">
                             <i class="fas fa-egg mr-1"></i>
-                            <span class="text-gray-700 ml-1">Producing 20+ dozen eggs weekly</span>
+                            <span class="text-gray-700 ml-1">Producing 1-2 dozen eggs Daily</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Ducks -->
                 <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Ducks" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Ducks.jpg?raw=true" alt="Ducks" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Ducks</h3>
                         <p class="text-gray-600 mb-4">Our Runner, Ancona, and Mallard ducks provide rich, flavorful eggs and help control pests in our ponds.</p>
