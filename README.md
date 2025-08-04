@@ -163,7 +163,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Chickens -->
                 <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1596703264279-5be29518770f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Chickens" class="w-full h-64 object-cover">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Chickens.jpg?raw=true" alt="Chickens" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-green-700">Egg-Laying Chickens</h3>
                         <p class="text-gray-600 mb-4">Our diverse flock includes Rhode Island Reds, Barred Rocks, and Ameraucanas, all pasture raised to forage naturally.</p>
