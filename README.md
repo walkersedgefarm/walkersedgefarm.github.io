@@ -31,7 +31,6 @@
     <nav class="bg-green-800 text-white sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <i class="fas fa-tractor text-2xl"></i>
                 <span class="text-xl font-bold">Walker's Edge Farm</span>
             </div>
             <div class="hidden md:flex space-x-6">
