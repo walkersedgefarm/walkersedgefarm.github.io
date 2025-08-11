@@ -355,7 +355,7 @@
                                 </div>
                                 <div class="ml-3">
                                     <p class="text-sm text-yellow-700">
-                                        <strong>Note:</strong> We'll contact you within 24 hours to confirm your order and pickup time. Orders must be picked up within 2 days of selected date or they will be released to other customers.
+                                        <strong>Note:</strong> We'll contact you within 24 hours to confirm your order and pickup time.
                                     </p>
                                 </div>
                             </div>
