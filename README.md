@@ -549,7 +549,7 @@
                 </div>
             </div>
             <div class="border-t border-green-800 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-green-300 text-sm mb-4 md:mb-0">© 2024 Walker's Edge Farm. All rights reserved.</p>
+                <p class="text-green-300 text-sm mb-4 md:mb-0">2024 Walker's Edge Farm. </p>
                 <div class="flex space-x-4">
                     <a href="https://www.instagram.com/walkers_edge_farm" target="_blank" class="text-green-300 hover:text-white">
                         <i class="fab fa-instagram text-xl"></i>
