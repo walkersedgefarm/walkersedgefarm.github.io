@@ -36,6 +36,7 @@
                 <a href="#home" class="hover:text-yellow-300 transition">Home</a>
                 <a href="#products" class="hover:text-yellow-300 transition">Products</a>
                 <a href="#animals" class="hover:text-yellow-300 transition">Our Animals</a>
+                <a href="#animals-for-sale" class="hover:text-yellow-300 transition">Animals for Sale</a>
                 <a href="#order" class="hover:text-yellow-300 transition">Order Eggs</a>
                 <a href="#about" class="hover:text-yellow-300 transition">About Us</a>
             </div>
@@ -252,6 +253,57 @@
         </div>
     </section>
 
+        <!-- Animals for Sale Section -->
+    <section id="animals-for-sale" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Animals For Sale</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Buckling #1 -->
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Sven.jpg?raw=true" alt="Myotonic goat buckling" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-700">Myotonic Buckling</h3>
+                        <p class="text-gray-600 mb-4">Sven a beautiful black and white buckling born February 2025. Excellent bloodlines, great for breeding or as a pet.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-800">$300</span>
+                            <a href="#contact" class="text-green-600 hover:text-green-800 font-semibold">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Buckling #2 -->
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Leif.jpg?raw=true" alt="Myotonic goat buckling" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-700">Myotonic Buckling</h3>
+                        <p class="text-gray-600 mb-4">Leif, our second black and white buckling born February 2025. Very friendly with excellent confirmation.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-800">$300</span>
+                            <a href="#contact" class="text-green-600 hover:text-green-800 font-semibold">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Doeling -->
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Cutie.jpg?raw=true" alt="Myotonic goat doeling" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-700">Myotonic Doeling</h3>
+                        <p class="text-gray-600 mb-4">Our First Doeling name Cutie, born January 2025. Will make an excellent brood doe with her excellent pedigree.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-800">$450</span>
+                            <a href="#contact" class="text-green-600 hover:text-green-800 font-semibold">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p class="text-gray-600 mb-4">All goats come with health records and registration paperwork.</p>
+                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold inline-block transition">Contact Us About These Goats</a>
+            </div>
+        </div>
+    </section>
+    
     <!-- Egg Order Section -->
     <section id="order" class="py-16 bg-white">
         <div class="container mx-auto px-4">
@@ -425,11 +477,11 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-4">"The eggs are amazing! The yolks are so orange and rich. The farm is beautiful and the animals are clearly well cared for. Will definitely be back!"</p>
+                    <p class="text-gray-600 mb-4">"-"</p>
                     <div class="flex items-center">
                         <div class="bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-600 font-bold mr-3">JC</div>
                         <div>
-                            <h4 class="font-semibold">Jennifer C.</h4>
+                            <h4 class="font-semibold">"-"</h4>
                             <p class="text-sm text-gray-500">Google Review</p>
                         </div>
                     </div>
@@ -446,11 +498,11 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-4">"My kids love visiting the farm to see all the animals. The eggs are delicious and the owners are so friendly and knowledgeable. A true gem in our community!"</p>
+                    <p class="text-gray-600 mb-4">"-"</p>
                     <div class="flex items-center">
                         <div class="bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-600 font-bold mr-3">MB</div>
                         <div>
-                            <h4 class="font-semibold">Mark B.</h4>
+                            <h4 class="font-semibold">"-"</h4>
                             <p class="text-sm text-gray-500">Google Review</p>
                         </div>
                     </div>
@@ -467,11 +519,11 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-4">"The Highland cattle are magnificent and the eggs are the best I've ever tasted. You can really taste the difference of pasture-raised eggs. Highly recommend!"</p>
+                    <p class="text-gray-600 mb-4">"-"</p>
                     <div class="flex items-center">
                         <div class="bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-600 font-bold mr-3">SL</div>
                         <div>
-                            <h4 class="font-semibold">Sarah L.</h4>
+                            <h4 class="font-semibold">"-"</h4>
                             <p class="text-sm text-gray-500">Google Review</p>
                         </div>
                     </div>
@@ -574,6 +626,14 @@
         </div>
     </footer>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75">
+        <div class="relative max-w-4xl mx-auto">
+            <button id="closeModal" class="absolute -top-10 right-0 text-white text-3xl hover:text-yellow-300">&times;</button>
+            <img id="modalImage" src="" alt="Enlarged view" class="max-h-[90vh] mx-auto">
+        </div>
+    </div>
+ 
     <script>
         // Mobile menu toggle
         document.getElementById('menu-btn').addEventListener('click', function() {
@@ -679,9 +739,43 @@ Notes: ${notes || 'None'}`;
             document.getElementById('pickup-date-container').classList.toggle('hidden', isDelivery);
             document.getElementById('delivery-date-container').classList.toggle('hidden', !isDelivery);
             
+        // Delivery toggle handler
+        document.getElementById('delivery-toggle').addEventListener('change', function() {
+            const isDelivery = this.checked;
+            document.getElementById('pickup-date-container').classList.toggle('hidden', isDelivery);
+            document.getElementById('delivery-date-container').classList.toggle('hidden', !isDelivery);
+            
             // Make the appropriate date field required
             document.getElementById('pickup-date').required = !isDelivery;
             document.getElementById('delivery-date').required = isDelivery;
+        });
+
+        // Image modal functionality
+        const animalImages = document.querySelectorAll('#animals-for-sale .animal-card img');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+
+        animalImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
