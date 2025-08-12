@@ -318,25 +318,25 @@
                 <div class="bg-white p-8 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold mb-6 text-gray-800 tracking-wider">Place Your Order</h3>
                     
-                    <form class="space-y-4">
+                    <form id="orderForm" class="space-y-4" action="https://formsubmit.co/walkersedgefarm@gmail.com" method="POST">
                         <div>
                             <label for="fullname" class="block text-gray-700 mb-2">Full Name</label>
-                            <input type="text" id="fullname" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <input type="text" id="fullname" name="Full Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
                         </div>
                         
                         <div>
                             <label for="email" class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <input type="email" id="email" name="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
                         </div>
                         
                         <div>
                             <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <input type="tel" id="phone" name="Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
                         </div>
                         
                         <div>
                             <label for="egg-type" class="block text-gray-700 mb-2">Egg Type</label>
-                            <select id="egg-type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <select id="egg-type" name="Egg Type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
                                 <option>Chicken Eggs (Standard)</option>
                                 <option>Chicken Eggs (Large)</option>
                                 <option>Duck Eggs</option>
@@ -346,7 +346,7 @@
                         
                         <div>
                             <label for="quantity" class="block text-gray-700 mb-2">Quantity</label>
-                            <select id="quantity" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <select id="quantity" name="Quantity" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
                                 <option>1 dozen</option>
                                 <option>2 dozen</option>
                                 <option>3 dozen</option>
@@ -356,27 +356,33 @@
                         </div>
                         
                         <div class="flex items-center">
-                            <input type="checkbox" id="delivery" class="mr-2">
+                            <input type="checkbox" id="delivery" name="Delivery Requested" class="mr-2">
                             <label for="delivery" class="text-gray-700">Check for Delivery</label>
                         </div>
                         
                         <div>
                             <label for="pickup-date" class="block text-gray-700 mb-2">Preferred Pickup Date</label>
-                            <input type="date" id="pickup-date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <input type="date" id="pickup-date" name="Preferred Pickup Date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
                         </div>
                         
                         <div>
                             <label for="delivery-date" class="block text-gray-700 mb-2">Preferred Delivery Date</label>
-                            <input type="date" id="delivery-date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <input type="date" id="delivery-date" name="Preferred Delivery Date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
                         </div>
                         
                         <div>
                             <label for="requests" class="block text-gray-700 mb-2">Special Requests</label>
-                            <textarea id="requests" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                            <textarea id="requests" name="Special Requests" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
                         </div>
                         
+                        <input type="hidden" name="_subject" value="New Egg Order">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://walkersedgefarm.github.io/thank-you.html">
+                        <input type="hidden" name="_autoresponse" value="Thank you for your egg order! We'll contact you within 24 hours to confirm your order and pickup time.">
+                        <input type="hidden" name="Order Total" id="order-total" value="">
+                        
                         <div class="flex justify-between items-center pt-4">
-                            <button type="button" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300">Cash Order</button>
+                            <button type="submit" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300">Cash Order</button>
                             <a href="https://www.paypal.com/ncp/payment/MYETDXRGGTS4J" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Pay with PayPal</a>
                         </div>
                     </form>
@@ -659,6 +665,25 @@
     </footer>
 
     <script>
+        // Calculate order total when form changes
+        document.getElementById('orderForm').addEventListener('change', function() {
+            const eggType = document.getElementById('egg-type').value;
+            const quantity = document.getElementById('quantity').value;
+            const total = calculateOrderTotal(eggType, quantity);
+            document.getElementById('order-total').value = `${total}`;
+        });
+
+        function calculateOrderTotal(eggType, quantity) {
+            const dozenCount = parseInt(quantity);
+            let pricePerDozen = 5; // default price
+            
+            if (eggType.includes('Duck')) pricePerDozen = 8;
+            else if (eggType.includes('Large')) pricePerDozen = 6;
+            
+            const subtotal = dozenCount * pricePerDozen;
+            return subtotal.toFixed(2);
+        }
+
         // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
