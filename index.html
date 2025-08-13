@@ -6,85 +6,84 @@
     <title>Walker's Edge Farm | Sustainable Family Farm</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Reviews Widget by Elfsight -->
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <style>
-        p {
-            letter-spacing: 0.025em;
-            line-height: 1.75;
+        button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
         }
-        .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Sunset.jpg?raw=true');
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Sunset.jpg?raw=true");
             background-size: cover;
             background-position: center;
         }
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .nav-link::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #10b981;
-            transition: width .3s;
-        }
-        .testimonial-card {
+        .animal-card {
             transition: all 0.3s ease;
         }
-        .testimonial-card:hover {
-            transform: scale(1.03);
+        .animal-card:hover {
+            transform: scale(1.02);
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+        }
+        
+        #imageModal {
+            transition: opacity 0.3s ease;
         }
     </style>
 </head>
-<body class="font-sans bg-green-50 text-green-900 tracking-wide">
+<body class="font-sans bg-green-50">
     <!-- Navigation -->
-    <nav class="bg-green-100 shadow-md sticky top-0 z-50">
+    <nav class="bg-green-800 text-white sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-green-800 tracking-wider">Walker's Edge Farm</div>
-                
-                <!-- Mobile menu button -->
+                <div class="text-2xl font-bold">
+                    <a href="#">Walker's Edge Farm</a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-green-200 transition">Home</a>
+                    <a href="#products" class="hover:text-green-200 transition">Products</a>
+                    <a href="#animals" class="hover:text-green-200 transition">Our Animals</a>
+                    <a href="#sale" class="hover:text-green-200 transition">Animals for Sale</a>
+                    <a href="#order" class="hover:text-green-200 transition">Order Eggs</a>
+                    <a href="#about" class="hover:text-green-200 transition">About Us</a>
+                </div>
                 <div class="md:hidden">
-                    <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-green-800 hover:text-green-600">Home</a>
-                    <a href="#products" class="nav-link text-green-800 hover:text-green-600">Products</a>
-                    <a href="#animals" class="nav-link text-green-800 hover:text-green-600">Our Animals</a>
-                    <a href="#sale" class="nav-link text-green-800 hover:text-green-600">Animals for Sale</a>
-                    <a href="#order" class="nav-link text-green-800 hover:text-green-600">Order Eggs</a>
-                    <a href="#about" class="nav-link text-green-800 hover:text-green-600">About Us</a>
-                </div>
             </div>
-            
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
-                <a href="#home" class="block py-2 text-green-800 hover:text-green-600">Home</a>
-                <a href="#products" class="block py-2 text-green-800 hover:text-green-600">Products</a>
-                <a href="#animals" class="block py-2 text-green-800 hover:text-green-600">Our Animals</a>
-                <a href="#sale" class="block py-2 text-green-800 hover:text-green-600">Animals for Sale</a>
-                <a href="#order" class="block py-2 text-green-800 hover:text-green-600">Order Eggs</a>
-                <a href="#about" class="block py-2 text-green-800 hover:text-green-600">About Us</a>
+                <a href="#home" class="block py-2 hover:bg-green-700 px-2 rounded">Home</a>
+                <a href="#products" class="block py-2 hover:bg-green-700 px-2 rounded">Products</a>
+                <a href="#animals" class="block py-2 hover:bg-green-700 px-2 rounded">Our Animals</a>
+                <a href="#sale" class="block py-2 hover:bg-green-700 px-2 rounded">Animals for Sale</a>
+                <a href="#order" class="block py-2 hover:bg-green-700 px-2 rounded">Order Eggs</a>
+                <a href="#about" class="block py-2 hover:bg-green-700 px-2 rounded">About Us</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero h-96 flex items-center justify-center text-white">
-        <div class="text-center px-4">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-wider">Walker's Edge Farm</h1>
-            <p class="text-xl md:text-2xl mb-8 italic">Family farm providing fresh, sustainable products since 2024</p>
+    <section id="home" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Walker's Edge Farm</h1>
+            <p class="text-xl md:text-2xl mb-8">Family farm providing fresh, sustainable products since 2024</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#products" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Our Products</a>
-                <a href="#order" class="bg-white hover:bg-gray-100 text-green-700 px-6 py-3 rounded-lg font-medium transition duration-300">Order Eggs</a>
+                <a href="#products" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Our Products
+                </a>
+                <a href="#order" class="bg-white hover:bg-gray-100 text-green-800 font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Order Eggs
+                </a>
             </div>
         </div>
     </section>
@@ -92,18 +91,17 @@
     <!-- Products Section -->
     <section id="products" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 tracking-wider">Our Farm Products</h2>
-            
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Our Farm Products</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product 1 -->
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Eggs.jpg?raw=true" alt="Farm fresh eggs" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800 tracking-wider">Farm Fresh Eggs</h3>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Farm Fresh Eggs</h3>
                         <p class="text-gray-600 mb-4">Our pasture raised chickens and ducks produce the most flavorful eggs you'll ever taste. Available in various sizes and colors.</p>
                         <div class="flex justify-between items-center">
-                            <span class="font-bold text-green-700">$5 - $8 per dozen</span>
-                            <a href="#order" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300">Order Now</a>
+                            <span class="font-bold text-green-800">$5 - $8 per dozen</span>
+                            <a href="#order" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -112,11 +110,11 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Cows.jpg?raw=true" alt="Highland cattle" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Highland Cattle</h3>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Highland Cattle</h3>
                         <p class="text-gray-600 mb-4">Our Scottish Highland cattle are raised with care on open pastures. Available as breeding stock or for meat.</p>
                         <div class="flex justify-between items-center">
-                            <span class="font-bold text-green-700">Breeding stock available</span>
-                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300">Inquire</a>
+                            <span class="font-bold text-green-800">Breeding stock available</span>
+                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">Inquire</a>
                         </div>
                     </div>
                 </div>
@@ -125,11 +123,11 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Goats.jpg?raw=true" alt="Myotonic goats" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Myotonic Goats</h3>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Myotonic Goats</h3>
                         <p class="text-gray-600 mb-4">Also known as "fainting goats," our myotonic goats are excellent for brush control and make great pets or livestock.</p>
                         <div class="flex justify-between items-center">
-                            <span class="font-bold text-green-700">Kids available seasonally</span>
-                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300">Inquire</a>
+                            <span class="font-bold text-green-800">Kids available seasonally</span>
+                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">Inquire</a>
                         </div>
                     </div>
                 </div>
@@ -138,11 +136,11 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Zucchini.jpg?raw=true" alt="Fresh vegetables" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Seasonal Vegetables</h3>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Seasonal Vegetables</h3>
                         <p class="text-gray-600 mb-4">Grown without synthetic pesticides, our vegetables are packed with flavor and nutrition. Availability varies by season.</p>
                         <div class="flex justify-between items-center">
-                            <span class="font-bold text-green-700">Market prices</span>
-                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300">What's in season?</a>
+                            <span class="font-bold text-green-800">Market prices</span>
+                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">What's in season?</a>
                         </div>
                     </div>
                 </div>
@@ -151,11 +149,11 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Pigs.jpg?raw=true" alt="Kunekune Pigs" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Kunekune Pigs</h3>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Kunekune Pigs</h3>
                         <p class="text-gray-600 mb-4">Our friendly Kunekune pigs are a heritage breed from New Zealand, known for their docile nature and grazing ability.</p>
                         <div class="flex justify-between items-center">
-                            <span class="font-bold text-green-700">Breeding stock & pork available</span>
-                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300">Inquire</a>
+                            <span class="font-bold text-green-800">Breeding stock & pork available</span>
+                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">Inquire</a>
                         </div>
                     </div>
                 </div>
@@ -164,11 +162,11 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Pumpkins.jpg?raw=true" alt="Pumpkins" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Pumpkins</h3>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Pumpkins</h3>
                         <p class="text-gray-600 mb-4">Available in fall, we grow a variety of pumpkins perfect for carving, baking, or decorating.</p>
                         <div class="flex justify-between items-center">
-                            <span class="font-bold text-green-700">Seasonal availability</span>
-                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300">Learn more</a>
+                            <span class="font-bold text-green-800">Seasonal availability</span>
+                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">Learn more</a>
                         </div>
                     </div>
                 </div>
@@ -177,76 +175,75 @@
     </section>
 
     <!-- Our Animals Section -->
-    <section id="animals" class="py-16 bg-gray-50">
+    <section id="animals" class="py-16 bg-green-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 font-['Playfair_Display'] tracking-wider">Meet Our Animals</h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Meet Our Animals</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Animal 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Chickens.jpg?raw=true" alt="Chickens" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Egg-Laying Chickens</h3>
-                        <p class="text-gray-600 mb-4">Our diverse flock includes Rhode Island Reds, Barred Rocks, and Ameraucanas, all pasture raised to forage naturally.</p>
-                        <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm inline-block">Producing 1-2 dozen eggs Daily</div>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Egg-Laying Chickens</h3>
+                        <p class="text-gray-600 mb-3">Our diverse flock includes Rhode Island Reds, Barred Rocks, and Ameraucanas, all pasture raised to forage naturally.</p>
+                        <p class="text-green-800 font-semibold">Producing 1-2 dozen eggs Daily</p>
                     </div>
                 </div>
                 
                 <!-- Animal 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Ducks.jpg?raw=true" alt="Ducks" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Ducks</h3>
-                        <p class="text-gray-600 mb-4">Our Runner, Ancona, and Mallard ducks provide rich, flavorful eggs and help control pests in our ponds.</p>
-                        <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm inline-block">Duck eggs available weekly</div>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Ducks</h3>
+                        <p class="text-gray-600 mb-3">Our Runner, Ancona, and Mallard ducks provide rich, flavorful eggs and help control pests in our ponds.</p>
+                        <p class="text-green-800 font-semibold">Duck eggs available weekly</p>
                     </div>
                 </div>
                 
                 <!-- Animal 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Cows.jpg?raw=true" alt="Highland cattle" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Highland Cattle</h3>
-                        <p class="text-gray-600 mb-4">These shaggy, gentle giants are perfectly adapted to our climate and help maintain our pastures naturally.</p>
-                        <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm inline-block">Breeding program established</div>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Highland Cattle</h3>
+                        <p class="text-gray-600 mb-3">These shaggy, gentle giants are perfectly adapted to our climate and help maintain our pastures naturally.</p>
+                        <p class="text-green-800 font-semibold">Breeding program established</p>
                     </div>
                 </div>
                 
                 <!-- Animal 4 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Goats.jpg?raw=true" alt="Myotonic goats" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Myotonic Goats</h3>
-                        <p class="text-gray-600 mb-4">Our "fainting goats" are a constant source of entertainment while helping us maintain brush control.</p>
-                        <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm inline-block">New kids born each spring</div>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Myotonic Goats</h3>
+                        <p class="text-gray-600 mb-3">Our "fainting goats" are a constant source of entertainment while helping us maintain brush control.</p>
+                        <p class="text-green-800 font-semibold">New kids born each spring</p>
                     </div>
                 </div>
                 
                 <!-- Animal 5 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Cooper.jpg?raw=true" alt="Farm dogs" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Farm Guardians</h3>
-                        <p class="text-gray-600 mb-4">Our livestock guardian dogs work tirelessly to protect all the animals from predators.</p>
-                        <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm inline-block">Always on duty</div>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Farm Guardians</h3>
+                        <p class="text-gray-600 mb-3">Our livestock guardian dogs work tirelessly to protect all the animals from predators.</p>
+                        <p class="text-green-800 font-semibold">Always on duty</p>
                     </div>
                 </div>
                 
                 <!-- Animal 6 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Pigs.jpg?raw=true" alt="Kunekune Pigs" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Kunekune Pigs</h3>
-                        <p class="text-gray-600 mb-4">Our Kunekune pigs thrive on pasture, using their short upturned snouts for grazing rather than rooting.</p>
-                        <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm inline-block">Breeding stock & pork available</div>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Kunekune Pigs</h3>
+                        <p class="text-gray-600 mb-3">Our Kunekune pigs thrive on pasture, using their short upturned snouts for grazing rather than rooting.</p>
+                        <p class="text-green-800 font-semibold">Breeding stock & pork available</p>
                     </div>
                 </div>
             </div>
             
             <div class="mt-12 text-center">
-                <h3 class="text-xl font-semibold mb-4">Follow Our Daily Farm Life</h3>
-                <a href="https://www.instagram.com/walkers_edge_farm" target="_blank" class="inline-flex items-center bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
-                    <i class="fab fa-instagram mr-2"></i> @walkersedgefarm
+                <h3 class="text-2xl font-bold mb-4 text-green-800">Follow Our Daily Farm Life</h3>
+                <a href="https://www.instagram.com/walkers_edge_farm" class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                    <i class="fab fa-instagram mr-2"></i>@walkersedgefarm
                 </a>
             </div>
         </div>
@@ -255,44 +252,43 @@
     <!-- Animals for Sale Section -->
     <section id="sale" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 tracking-wider">Animals For Sale</h2>
-            
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Animals For Sale</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Animal 1 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-green-200 transition duration-300">
-                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Sven.jpg?raw=true" alt="Myotonic goat buckling" class="w-full h-64 object-cover cursor-pointer">
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg border border-green-200">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Sven.jpg?raw=true" alt="Myotonic goat buckling" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Myotonic Buckling</h3>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Myotonic Buckling</h3>
                         <p class="text-gray-600 mb-4">Sven a beautiful black and white buckling born February 2025. Excellent bloodlines, great for breeding or as a pet.</p>
                         <div class="flex justify-between items-center">
-                            <span class="font-bold text-green-700">$300</span>
-                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300">Inquire</a>
+                            <span class="font-bold text-green-800">$300</span>
+                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">Inquire</a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Animal 2 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-green-200 transition duration-300">
-                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Leif.jpg?raw=true" alt="Myotonic goat buckling" class="w-full h-64 object-cover cursor-pointer">
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg border border-green-200">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Leif.jpg?raw=true" alt="Myotonic goat buckling" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Myotonic Buckling</h3>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Myotonic Buckling</h3>
                         <p class="text-gray-600 mb-4">Leif, our second black and white buckling born February 2025. Very friendly with excellent confirmation.</p>
                         <div class="flex justify-between items-center">
-                            <span class="font-bold text-green-700">$300</span>
-                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300">Inquire</a>
+                            <span class="font-bold text-green-800">$300</span>
+                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">Inquire</a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Animal 3 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-green-200 transition duration-300">
-                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Cutie.jpg?raw=true" alt="Myotonic goat doeling" class="w-full h-64 object-cover cursor-pointer">
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg border border-green-200">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Cutie.jpg?raw=true" alt="Myotonic goat doeling" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Myotonic Doeling</h3>
+                        <h3 class="text-xl font-bold mb-2 text-green-700">Myotonic Doeling</h3>
                         <p class="text-gray-600 mb-4">Our First Doeling name Cutie, born January 2025. Will make an excellent brood doe with her excellent pedigree.</p>
                         <div class="flex justify-between items-center">
-                            <span class="font-bold text-green-700">$450</span>
-                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm transition duration-300">Inquire</a>
+                            <span class="font-bold text-green-800">$450</span>
+                            <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">Inquire</a>
                         </div>
                     </div>
                 </div>
@@ -300,141 +296,162 @@
             
             <div class="mt-8 text-center">
                 <p class="text-gray-600 mb-4">All goats come with health records and registration paperwork.</p>
-                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Contact Us About These Goats</a>
+                <a href="#contact" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Contact Us About These Goats
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Order Eggs Section -->
-    <section id="order" class="py-16 bg-gray-50">
+    <section id="order" class="py-16 bg-green-50">
         <div class="container mx-auto px-4">
-            <div class="flex justify-center mb-8">
-                <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Central Peck.jpg?raw=true" alt="Egg Company Logo" class="h-64 md:h-80">
-            </div>
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 tracking-wider">Order Fresh Eggs</h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Order Form -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-6 text-gray-800 tracking-wider">Place Your Order</h3>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Central%20Peck.jpg?raw=true" alt="Egg Company Logo" class="w-full max-w-md mx-auto mb-8">
                     
-                    <form id="orderForm" class="space-y-4" action="https://formsubmit.co/walkersedgefarm@gmail.com" method="POST">
-                        <div>
-                            <label for="fullname" class="block text-gray-700 mb-2">Full Name</label>
-                            <input type="text" id="fullname" name="Full Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                        </div>
-                        
-                        <div>
-                            <label for="email" class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" name="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                        </div>
-                        
-                        <div>
-                            <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
-                            <input type="tel" id="phone" name="Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                        </div>
-                        
-                        <div>
-                            <label for="egg-type" class="block text-gray-700 mb-2">Egg Type</label>
-                            <select id="egg-type" name="Egg Type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                                <option>Chicken Eggs (Standard)</option>
-                                <option>Chicken Eggs (Large)</option>
-                                <option>Duck Eggs</option>
-                                <option>Mixed Dozen</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label for="quantity" class="block text-gray-700 mb-2">Quantity</label>
-                            <select id="quantity" name="Quantity" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                                <option>1 dozen</option>
-                                <option>2 dozen</option>
-                                <option>3 dozen</option>
-                                <option>4 dozen</option>
-                                <option>5 dozen</option>
-                            </select>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <input type="checkbox" id="delivery" name="Delivery Requested" class="mr-2">
-                            <label for="delivery" class="text-gray-700">Check for Delivery</label>
-                        </div>
-                        
-                        <div>
-                            <label for="pickup-date" class="block text-gray-700 mb-2">Preferred Pickup Date</label>
-                            <input type="date" id="pickup-date" name="Preferred Pickup Date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
-                        </div>
-                        
-                        <div>
-                            <label for="delivery-date" class="block text-gray-700 mb-2">Preferred Delivery Date</label>
-                            <input type="date" id="delivery-date" name="Preferred Delivery Date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
-                        </div>
-                        
-                        <div>
-                            <label for="requests" class="block text-gray-700 mb-2">Special Requests</label>
-                            <textarea id="requests" name="Special Requests" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-                        </div>
-                        
-                        <input type="hidden" name="_subject" value="New Egg Order">
-                        <input type="hidden" name="_template" value="table">
+                    <h2 class="text-3xl font-bold mb-6 text-green-800">Order Fresh Eggs</h2>
+                    
+                    <form class="bg-white p-6 rounded-lg shadow-md" action="https://formsubmit.co/walkersedgefarm@gmail.com" method="POST">
                         <input type="hidden" name="_next" value="https://walkersedgefarm.github.io/thank-you.html">
-                        <input type="hidden" name="_autoresponse" value="Thank you for your egg order! We'll contact you within 24 hours to confirm your order and pickup time.">
-                        <input type="hidden" name="Order Total" id="order-total" value="">
+                        <input type="hidden" name="_subject" value="New Egg Order Request">
+                        <input type="hidden" name="_template" value="table">
+                        <h3 class="text-xl font-bold mb-4 text-green-700">Place Your Order</h3>
                         
-                        <div class="flex justify-between items-center pt-4">
-                            <button type="submit" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300">Cash Order</button>
-                            <a href="https://www.paypal.com/ncp/payment/MYETDXRGGTS4J" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Pay with PayPal</a>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="fullname">Full Name*</label>
+                            <input type="text" id="fullname" name="fullname" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
                         </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="email">Email*</label>
+                            <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="phone">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="eggtype">Egg Type</label>
+                            <select id="eggtype" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                                <option>1 Dozen Chicken Eggs</option>
+                                <option>1 Dozen Chicken Eggs w/ Carton Return</option>
+                                <option>1 Dozen Duck Eggs</option>
+                                <option>1 Dozen Duck Eggs w/ Carton Return</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="quantity">Quantity</label>
+                            <input type="number" id="quantity" min="1" value="1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="flex items-center">
+                                <input type="checkbox" id="deliveryCheckbox" class="form-checkbox h-5 w-5 text-green-600">
+                                <span class="ml-2 text-gray-700">Check for Delivery</span>
+                            </label>
+                        </div>
+                        
+                        <div class="mb-4" id="pickupDateContainer">
+                            <label class="block text-gray-700 mb-2" for="pickupdate">Preferred Pickup Date</label>
+                            <input type="date" id="pickupdate" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                        
+                        <div class="mb-4 hidden" id="deliveryDateContainer">
+                            <label class="block text-gray-700 mb-2" for="deliverydate">Preferred Delivery Date</label>
+                            <input type="date" id="deliverydate" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2" for="requests">Special Requests</label>
+                            <textarea id="requests" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <button type="submit" id="submitBtn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded transition duration-300 w-full sm:w-auto">
+                                Cash Order
+                            </button>
+                            <input type="hidden" name="_subject" value="New Egg Order Request">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://walkersedgefarm.github.io/thank-you.html">
+                            <a href="https://www.paypal.com/ncp/payment/MYETDXRGGTS4J" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded transition duration-300 w-full sm:w-auto text-center">
+                                Pay with PayPal or Venmo
+                            </a>
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const form = document.querySelector('form');
+                                const submitBtn = document.getElementById('submitBtn');
+                                
+                                // Initial check
+                                checkFormValidity();
+                                
+                                // Check form validity on input changes
+                                form.addEventListener('input', checkFormValidity);
+                                
+                                function checkFormValidity() {
+                                    const requiredFields = form.querySelectorAll('[required]');
+                                    let isValid = true;
+                                    
+                                    requiredFields.forEach(field => {
+                                        if (!field.value.trim()) {
+                                            isValid = false;
+                                        }
+                                    });
+                                    
+                                    if (isValid) {
+                                        submitBtn.disabled = false;
+                                        submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                                        submitBtn.classList.add('hover:bg-green-700');
+                                    } else {
+                                        submitBtn.disabled = true;
+                                        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                                        submitBtn.classList.remove('hover:bg-green-700');
+                                    }
+                                }
+                            });
+                        </script>
                     </form>
                 </div>
                 
-                <!-- Order Information -->
-                <div>
-                    <div class="bg-white p-8 rounded-lg shadow-md mb-6">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Egg Order Information</h3>
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold mb-4 text-green-700">Egg Order Information</h3>
                         
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="font-semibold text-gray-800 mb-2">Availability</h4>
-                                <p class="text-gray-600">Eggs are typically available year-round, with highest production in spring and summer.</p>
-                            </div>
-                            
-                            <div>
-                                <h4 class="font-semibold text-gray-800 mb-2">Pickup Location</h4>
-                                <p class="text-gray-600">Farm pickup only at Walker's Edge Farm, 4120 West 295th Street, Louisburg, KS 66053</p>
-                            </div>
-                            
-                            <div>
-                                <h4 class="font-semibold text-gray-800 mb-2">Pickup Hours</h4>
-                                <ul class="text-gray-600 space-y-1">
-                                    <li>Monday-Friday: 5pm-7pm</li>
-                                    <li>Saturday: 9am-12pm</li>
-                                    <li>Sundays: 9am-12am</li>
-                                </ul>
-                            </div>
-                            
-                            <div>
-                                <h4 class="font-semibold text-gray-800 mb-2">Egg Care</h4>
-                                <p class="text-gray-600">Our eggs are unwashed to preserve their natural protective coating. Store in refrigerator for longest shelf life.</p>
-                            </div>
-                            
-                            <div>
-                                <h4 class="font-semibold text-gray-800 mb-2">Payment</h4>
-                                <p class="text-gray-600">Cash, Venmo, or Paypal accepted at pickup.</p>
-                            </div>
+                        <div class="mb-6">
+                            <h4 class="font-bold text-green-800 mb-2">Availability</h4>
+                            <p class="text-gray-600">Eggs are typically available year-round, with highest production in spring and summer.</p>
                         </div>
-                    </div>
-                    
-                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <i class="fas fa-exclamation-circle text-yellow-400"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm text-yellow-700">
-                                    <span class="font-semibold">Note:</span> We'll contact you within 24 hours to confirm your order and pickup time.
-                                </p>
-                            </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-green-800 mb-2">Pickup Location</h4>
+                            <p class="text-gray-600">Farm pickup only at Walker's Edge Farm, 4120 West 295th Street, Louisburg, KS 66053</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-green-800 mb-2">Pickup Hours</h4>
+                            <ul class="text-gray-600 list-disc pl-5">
+                                <li>Monday-Friday: 5pm-7pm</li>
+                                <li>Saturday: 9am-12pm</li>
+                                <li>Sundays: 9am-12am</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-green-800 mb-2">Egg Care</h4>
+                            <p class="text-gray-600">Our eggs are unwashed to preserve their natural protective coating. Store in refrigerator for longest shelf life.</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-green-800 mb-2">Payment</h4>
+                            <p class="text-gray-600">Cash, Venmo, or Paypal accepted at pickup.</p>
+                        </div>
+                        
+                        <div class="bg-green-100 p-4 rounded-lg">
+                            <p class="text-green-800 font-semibold">Note: We'll contact you within 24 hours to confirm your order and pickup time.</p>
                         </div>
                     </div>
                 </div>
@@ -445,48 +462,43 @@
     <!-- About Us Section -->
     <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/SnowBarn.jpg?raw=true" alt="Farm family" class="w-full rounded-lg shadow-md">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/SnowBarn.jpg?raw=true" alt="Farm family" class="w-full rounded-lg shadow-lg">
                 </div>
                 
-                <div>
-                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Our Farm Story</h2>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-green-800">Our Farm Story</h2>
                     <p class="text-gray-600 mb-4">Walker's Edge Farm was established in 2024 by the Walker family with a vision to create a sustainable, family-run farm that provides high-quality products to our local community.</p>
-                    <p class="text-gray-600 mb-6">What began as a small homestead with a few chickens has grown into a diverse farm operation raising highland cattle, myotonic goats, and producing eggs, vegetables, and pumpkins.</p>
+                    <p class="text-gray-600 mb-4">What began as a small homestead with a few chickens has grown into a diverse farm operation raising highland cattle, myotonic goats, and producing eggs, vegetables, and pumpkins.</p>
+                    <p class="text-gray-600 mb-6">We believe in ethical animal husbandry, sustainable farming practices, and building connections between people and their food sources. Our animals are raised with care, allowed to express their natural behaviors, and contribute to the health of our land.</p>
                     
-                    <div class="mb-8">
-                        <p class="text-gray-600 mb-6">We believe in ethical animal husbandry, sustainable farming practices, and building connections between people and their food sources. Our animals are raised with care, allowed to express their natural behaviors, and contribute to the health of our land.</p>
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <div class="bg-green-50 p-4 rounded-lg text-center">
-                                <i class="fas fa-heart text-green-600 text-2xl mb-2"></i>
-                                <h4 class="font-semibold text-gray-800">Animal Welfare Focused</h4>
-                            </div>
-                            <div class="bg-green-50 p-4 rounded-lg text-center">
-                                <i class="fas fa-leaf text-green-600 text-2xl mb-2"></i>
-                                <h4 class="font-semibold text-gray-800">Sustainable Practices</h4>
-                            </div>
-                            <div class="bg-green-50 p-4 rounded-lg text-center">
-                                <i class="fas fa-home text-green-600 text-2xl mb-2"></i>
-                                <h4 class="font-semibold text-gray-800">Family Operated</h4>
-                            </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                        <div class="bg-green-50 p-4 rounded-lg text-center">
+                            <i class="fas fa-heart text-green-600 text-3xl mb-2"></i>
+                            <h4 class="font-bold text-green-800">Animal Welfare Focused</h4>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg text-center">
+                            <i class="fas fa-leaf text-green-600 text-3xl mb-2"></i>
+                            <h4 class="font-bold text-green-800">Sustainable Practices</h4>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg text-center">
+                            <i class="fas fa-home text-green-600 text-3xl mb-2"></i>
+                            <h4 class="font-bold text-green-800">Family Operated</h4>
                         </div>
                     </div>
                     
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Connect With Us</h3>
-                        <div class="flex space-x-4">
-                            <a href="https://www.instagram.com/walkers_edge_farm" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full transition duration-300">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.facebook.com/people/Walkers-Edge-Farm/61564915550157/?ref=_xav_ig_profile_page_web#" target="_blank" class="bg-green-600 hover:bg-green-700 text-white p-3 rounded-full transition duration-300">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="mailto:walkersedgefarm@gmail.com" class="bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-full transition duration-300">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
+                    <h3 class="text-xl font-bold mb-4 text-green-700">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/walkers_edge_farm" class="inline-flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white w-10 h-10 rounded-full transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Walkers-Edge-Farm/61564915550157/?ref=_xav_ig_profile_page_web#" class="text-green-600 hover:text-green-800 text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="mailto:walkersedgefarm@gmail.com" class="text-green-600 hover:text-green-800 text-2xl">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -494,200 +506,147 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-green-800 text-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 font-['IM_Fell_English_SC'] tracking-wider">Google Reviews</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card bg-green-50 p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center">
-                            <span class="text-gray-600 font-bold">JC</span>
-                        </div>
-                        <div class="ml-4">
-                            <div class="flex">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic mb-4">"The best farm-fresh eggs I've ever had! The yolks are so rich and orange. Can't go back to store-bought now."</p>
-                    <p class="text-sm text-gray-500">- JC</p>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center">
-                            <span class="text-gray-600 font-bold">MB</span>
-                        </div>
-                        <div class="ml-4">
-                            <div class="flex">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic mb-4">"Our Kunekune pig from Walker's Edge has been such a wonderful addition to our homestead. Healthy, friendly, and exactly as described!"</p>
-                    <p class="text-sm text-gray-500">- MB</p>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center">
-                            <span class="text-gray-600 font-bold">SL</span>
-                        </div>
-                        <div class="ml-4">
-                            <div class="flex">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic mb-4">"The Walker family runs an exceptional farm. Their commitment to animal welfare and sustainable practices is evident in everything they do."</p>
-                    <p class="text-sm text-gray-500">- SL</p>
-                </div>
-            </div>
-            
-            <div class="mt-12 text-center">
-                <a href="https://g.page/r/CZForsspNFBvEAE/review" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 inline-flex items-center">
-                    <i class="fas fa-pen-fancy mr-2"></i> Leave Us a Review
-                </a>
-            </div>
+            <h2 class="text-3xl font-bold text-center mb-12">Google Reviews</h2>
+            <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-69a62b04-50c7-46d8-9f9d-1e63221ea5bd" data-elfsight-app-lazy></div>
         </div>
     </section>
 
-    <!-- Visit Us Section -->
+    <!-- Contact Us Section -->
     <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 font-['IM_Fell_English_SC'] tracking-wider">Contact Us</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Contact Us</h2>
             
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Contact Information</h3>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-green-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-6 text-green-700">Contact Information</h3>
                         
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Address</h4>
-                                <p class="text-gray-600">4120 West 295th Street<br>Louisburg, KS 66053</p>
-                            </div>
-                            
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Email</h4>
-                                <a href="mailto:walkersedgefarm@gmail.com" class="text-green-600 hover:text-green-700">Walkersedgefarm@gmail.com</a>
-                            </div>
-                            
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Farm Stand Hours</h4>
-                                <p class="text-gray-600">Coming Soon</p>
-                            </div>
+                        <div class="mb-6">
+                            <h4 class="font-bold text-green-800 mb-2">Address</h4>
+                            <p class="text-gray-600">4120 West 295th Street<br>Louisburg, KS 66053</p>
                         </div>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Follow Our Journey</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-green-800 mb-2">Email</h4>
+                            <a href="mailto:walkersedgefarm@gmail.com" class="text-green-600 hover:text-green-800">Walkersedgefarm@gmail.com</a>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-green-800 mb-2">Farm Stand Hours</h4>
+                            <p class="text-gray-600">Coming Soon</p>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-green-700">Follow Our Journey</h3>
                         <p class="text-gray-600 mb-4">For daily farm updates, animal photos, and product availability:</p>
-                        <a href="https://www.instagram.com/walkers_edge_farm" target="_blank" class="inline-flex items-center bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
-                            <i class="fab fa-instagram mr-2"></i> @walkers_edge_farm
+                        <a href="https://www.instagram.com/walkers_edge_farm" class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                            <i class="fab fa-instagram mr-2"></i>@walkers_edge_farm
                         </a>
                     </div>
                 </div>
                 
-                <div>
-                    <div class="bg-gray-100 p-8 rounded-lg h-full">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Our Location</h3>
-                        <p class="text-gray-600 mb-6">Please contact us with any inquiry.</p>
-                        
-                        <!-- Map Placeholder - Replace with actual map embed -->
-                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-map-marker-alt text-4xl text-gray-400"></i>
-                        </div>
+                <div class="lg:w-1/2">
+                    <div class="h-full bg-gray-100 rounded-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.055084642119!2d-94.715015!3d38.6275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDM3JzM5LjAiTiA5NMKwNDInNTQuMCJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
+                    <p class="mt-4 text-center text-gray-600">Please contact us with any inquiry.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-75 flex items-center justify-center p-4">
-        <div class="relative max-w-4xl w-full">
-            <button id="closeModal" class="absolute -top-10 right-0 text-white text-3xl">&times;</button>
-            <img id="modalImage" src="" alt="Enlarged view" class="w-full max-h-[90vh] object-contain">
-        </div>
-    </div>
-
     <!-- Footer -->
-    <footer class="bg-green-900 text-white py-12">
+    <footer class="bg-green-900 text-white py-8">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <div class="text-2xl font-bold mb-4 md:mb-0 tracking-wider">Walker's Edge Farm</div>
-                <p class="text-green-200">Family farm established in 2024</p>
-            </div>
-            
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex flex-wrap justify-center gap-4 mb-4 md:mb-0">
-                    <a href="#home" class="text-green-300 hover:text-white">Home</a>
-                    <a href="#products" class="text-green-300 hover:text-white">Products</a>
-                    <a href="#order" class="text-green-300 hover:text-white">Order Eggs</a>
-                    <a href="#about" class="text-green-300 hover:text-white">About</a>
-                    <a href="#contact" class="text-green-300 hover:text-white">Contact</a>
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-bold">Walker's Edge Farm</div>
+                    <p class="mt-1">Family farm established in 2024</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4 md:gap-6 mb-4 md:mb-0">
+                    <a href="#home" class="hover:text-green-300 transition">Home</a>
+                    <a href="#products" class="hover:text-green-300 transition">Products</a>
+                    <a href="#order" class="hover:text-green-300 transition">Order Eggs</a>
+                    <a href="#about" class="hover:text-green-300 transition">About</a>
+                    <a href="#contact" class="hover:text-green-300 transition">Contact</a>
                 </div>
                 
                 <div class="flex space-x-4">
-                    <a href="https://www.instagram.com/walkers_edge_farm" target="_blank" class="text-green-300 hover:text-white text-xl">
+                    <a href="https://www.instagram.com/walkers_edge_farm" class="inline-flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white w-10 h-10 rounded-full transition duration-300">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="text-green-200 hover:text-white text-xl">
-                        <i class="fab fa-facebook-f"></i>
+                    <a href="#" class="text-white hover:text-green-300 text-xl">
+                        <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="#" class="text-green-200 hover:text-white text-xl">
-                        <i class="fas fa-envelope"></i>
+                    <a href="#" class="text-white hover:text-green-300 text-xl">
+                        <i class="fab fa-twitter"></i>
                     </a>
                 </div>
             </div>
             
-            <div class="border-t border-green-700 mt-8 pt-8 text-center text-green-300">
-                <p>&copy; 2024 Walker's Edge Farm. All rights reserved.</p>
+            <div class="border-t border-green-800 mt-6 pt-6 text-center text-sm text-green-300">
+                © 2024 Walker's Edge Farm. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <script>
-        // Calculate order total when form changes
-        document.getElementById('orderForm').addEventListener('change', function() {
-            const eggType = document.getElementById('egg-type').value;
-            const quantity = document.getElementById('quantity').value;
-            const total = calculateOrderTotal(eggType, quantity);
-            document.getElementById('order-total').value = `${total}`;
-        });
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-75" onclick="closeModal()"></div>
+        <div class="relative flex items-center justify-center h-full w-full p-4">
+            <div class="relative max-w-4xl max-h-full">
+                <button onclick="closeModal()" class="absolute -top-10 right-0 text-white text-3xl hover:text-gray-300">&times;</button>
+                <img id="modalImage" src="" alt="Enlarged view" class="max-w-full max-h-screen">
+            </div>
+        </div>
+    </div>
 
-        function calculateOrderTotal(eggType, quantity) {
-            const dozenCount = parseInt(quantity);
-            let pricePerDozen = 5; // default price
+    <script>
+        // Toggle delivery/pickup date fields
+        document.getElementById('deliveryCheckbox').addEventListener('change', function() {
+            const pickupContainer = document.getElementById('pickupDateContainer');
+            const deliveryContainer = document.getElementById('deliveryDateContainer');
             
-            if (eggType.includes('Duck')) pricePerDozen = 8;
-            else if (eggType.includes('Large')) pricePerDozen = 6;
-            
-            const subtotal = dozenCount * pricePerDozen;
-            return subtotal.toFixed(2);
-        }
+            if (this.checked) {
+                pickupContainer.classList.add('hidden');
+                deliveryContainer.classList.remove('hidden');
+            } else {
+                pickupContainer.classList.remove('hidden');
+                deliveryContainer.classList.add('hidden');
+            }
+        });
 
         // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
+        });
+
+        // Modal functions
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Add click handlers to animal sale images
+        document.querySelectorAll('#sale .animal-card img').forEach(img => {
+            img.addEventListener('click', function() {
+                openModal(this.src);
+            });
+            img.classList.add('cursor-zoom-in');
         });
 
         // Smooth scrolling for anchor links
@@ -696,11 +655,11 @@
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+                if (targetId === '#') return;
                 
+                const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                    targetElement.scrollIntoView({
                         behavior: 'smooth'
                     });
                     
@@ -711,43 +670,6 @@
                     }
                 }
             });
-        });
-
-        // Add shadow to navbar on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 10) {
-                nav.classList.add('shadow-lg');
-            } else {
-                nav.classList.remove('shadow-lg');
-            }
-        });
-
-        // Image modal functionality
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const closeModal = document.getElementById('closeModal');
-
-        // Add click handlers to all animal sale images
-        document.querySelectorAll('#sale .product-card img').forEach(img => {
-            img.addEventListener('click', function() {
-                modal.classList.remove('hidden');
-                modalImg.src = this.src;
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            });
-        });
-
-        // Close modal when clicking X or outside image
-        closeModal.addEventListener('click', function() {
-            modal.classList.add('hidden');
-            document.body.style.overflow = '';
-        });
-
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
         });
     </script>
 </body>
