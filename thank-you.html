@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Walkers Edge Farm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .farm-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500382018108-844b52a330b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .btn-primary {
+            background-color: #5a7247;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #3a4a2e;
+            transform: translateY(-2px);
+        }
+        
+        .leaf-icon {
+            color: #5a7247;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f0f0f0;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="farm-bg text-white py-20 px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <i class="fas fa-leaf text-5xl mb-6 leaf-icon"></i>
+            <h1 class="title-font text-4xl md:text-5xl font-bold mb-4">Thank You!</h1>
+            <p class="text-xl md:text-2xl mb-8">We appreciate your order and will contact you shortly about delivery.</p>
+            <div class="w-24 h-1 bg-white mx-auto mb-8"></div>
+        </div>
+    </header>
 
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-12 md:py-16">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="bg-white rounded-lg shadow-lg p-8 md:p-12 mb-12">
+                <i class="fas fa-check-circle text-6xl text-green-500 mb-6"></i>
+                <h2 class="title-font text-3xl font-bold mb-4 text-gray-800">Your Submission Was Successful</h2>
+                <p class="text-gray-600 mb-8 text-lg">We've received your inquiry and our team at Walker's Edge Farm will respond as quickly as possible. In the meantime, feel free to explore more about our farm and what we offer.</p>
+                
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <a href="https://walkersedgefarm.com" class="btn-primary text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center">
+                        <i class="fas fa-home mr-2"></i> Return Home
+                    </a>
+                    <a href="https://walkersedgefarm.com/#about" class="bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg inline-flex items-center hover:bg-gray-300 transition">
+                        <i class="fas fa-info-circle mr-2"></i> About Our Farm
+                    </a>
+                    <a href="https://walkersedgefarm.com/#products" class="bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg inline-flex items-center hover:bg-gray-300 transition">
+                        <i class="fas fa-shopping-basket mr-2"></i> Our Products
+                    </a>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+                <h3 class="title-font text-2xl font-bold mb-6 text-gray-800">Stay Connected</h3>
+                <p class="text-gray-600 mb-6">Follow us on social media for the latest updates from Walker's Edge Farm:</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="text-gray-600 hover:text-green-600 transition">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-green-600 transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="mailto:walkersedgefarm@gmail.com" class="text-gray-600 hover:text-green-600 transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="title-font text-xl font-bold mb-2">Walker's Edge Farm</h3>
+                    <p class="text-gray-400">Family farm established in 2024.</p>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    <p> <span id="year"></span> Walker's Edge Farm. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Confetti Animation -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Simple confetti effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const colors = ['#5a7247', '#f0f0f0', '#d4a762', '#ffffff'];
+            const header = document.querySelector('header');
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                // Random properties
+                const size = Math.random() * 10 + 5;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 3 + 2;
+                const animationDelay = Math.random() * 5;
+                
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = color;
+                confetti.style.left = `${left}%`;
+                confetti.style.top = '-10px';
+                confetti.style.borderRadius = '50%';
+                confetti.style.animation = `fall ${animationDuration}s ease-in ${animationDelay}s forwards`;
+                
+                header.appendChild(confetti);
+            }
+            
+            // Add animation style
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fall {
+                    to {
+                        transform: translateY(100vh) rotate(360deg);
+                        opacity: 1;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
