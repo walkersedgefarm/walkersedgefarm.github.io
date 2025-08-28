@@ -586,23 +586,10 @@
             const date = isDelivery ? document.getElementById('delivery-date').value : document.getElementById('pickup-date').value;
             
             if(name && email && eggType && quantity) {
-                // Construct email body
-                const subject = `New Egg Order - ${name}`;
-                const body = `New order received:
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Egg Type: ${eggType}
-Quantity: ${quantity}
-${isDelivery ? 'Delivery' : 'Pickup'} Date: ${date}
-Payment Method: ${paymentMethod}
-Notes: ${notes || 'None'}`;
-
-                // Create hidden form to submit via email
+                // Create hidden form to submit via formsubmit
                 const emailForm = document.createElement('form');
                 emailForm.action = 'https://formsubmit.co/walkersedgefarm@gmail.com';
                 emailForm.method = 'POST';
-                emailForm.target = '_blank';
                 
                 // Add hidden inputs
                 const addInput = (name, value) => {
@@ -613,16 +600,18 @@ Notes: ${notes || 'None'}`;
                     emailForm.appendChild(input);
                 };
                 
-                addInput('_subject', subject);
+                addInput('_subject', `New ${paymentMethod} Egg Order - ${name}`);
+                addInput('_replyto', email);
                 addInput('name', name);
                 addInput('email', email);
-                addInput('phone', phone);
-                addInput('eggType', eggType);
-                addInput('quantity', quantity);
-                addInput('deliveryMethod', isDelivery ? 'Delivery' : 'Pickup');
-                addInput('date', date);
-                addInput('paymentMethod', paymentMethod);
-                addInput('notes', notes || 'None');
+                addInput('phone', phone || 'Not provided');
+                addInput('Egg Type', eggType);
+                addInput('Quantity', quantity);
+                addInput('Delivery Method', isDelivery ? 'Delivery' : 'Pickup');
+                addInput('Date', date);
+                addInput('Payment Method', paymentMethod);
+                addInput('Notes', notes || 'None');
+                addInput('_next', window.location.href); // Redirect back to order page after submission
                 
                 // Append and submit form
                 document.body.appendChild(emailForm);
@@ -630,12 +619,10 @@ Notes: ${notes || 'None'}`;
                 document.body.removeChild(emailForm);
                 
                 // Show confirmation
-                alert(`Thank you, ${name}! Your order for ${quantity} ${eggType} has been received. We'll contact you to confirm.`);
+                alert(`Thank you, ${name}! Your ${paymentMethod} order for ${quantity} ${eggType} has been received. We'll contact you to confirm.`);
                 
-                // Reset form if this was a cash order
-                if (paymentMethod === 'Cash') {
-                    form.reset();
-                }
+                // Reset form
+                form.reset();
             } else {
                 alert('Please fill out all required fields.');
             }
@@ -647,9 +634,10 @@ Notes: ${notes || 'None'}`;
             submitOrder('Cash');
         });
 
-        // PayPal button handler - just opens PayPal
+        // PayPal button handler - submits form via formsubmit before redirecting
         document.querySelector('a[href*="paypal"]').addEventListener('click', function(e) {
             e.preventDefault();
+            submitOrder('PayPal');
             window.open(this.href, '_blank');
         });
 
