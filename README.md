@@ -58,12 +58,6 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero h-screen flex items-center justify-center text-center text-white">
-        <div class="px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Walker's Edge Farm</h1>
-            <p class="text-xl md:text-2xl mb-8">Family farm providing fresh, sustainable products since 2024</p>
-            <div class="flex justify-center space-x-4">
-                <a href="#products" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold transition">Our Products</a>
-                <a href="#order" class="bg-transparent border-2 border-white hover:bg-white hover:text-green-800 text-white px-6 py-3 rounded-lg font-semibold transition">Order Eggs</a>
             </div>
         </div>
     </section>
