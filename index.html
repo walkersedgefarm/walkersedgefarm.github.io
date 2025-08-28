@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Website Logo.png?raw=true');
+            background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, 0)), url('https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Website Logo.png?raw=true');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -236,7 +236,7 @@
                 </div>
 
                 <!-- Instagram Feed -->
-                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300">
+                <div class="animal-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 lg:col-start-2">
                     <div class="h-64 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white">
                         <div class="text-center p-4">
                             <i class="fab fa-instagram text-4xl mb-2"></i>
@@ -307,11 +307,14 @@
             <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Order Fresh Eggs</h2>
             <div class="flex flex-col lg:flex-row gap-8">
                 <div class="lg:w-1/2 order-form p-8 rounded-lg shadow-lg">
-                    <div class="flex justify-center mb-6">
-                        <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Central%50Peck.jpg?raw=true" alt="Central Peck" class="h-24">
-                    </div>
                     <h3 class="text-2xl font-semibold mb-6 text-green-700 text-center">Place Your Order</h3>
-                    <form id="egg-order-form" class="space-y-4">
+                    <form id="egg-order-form" class="space-y-4" action="https://formsubmit.co/walkersedgefarm@gmail.com" method="POST">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Egg Order from Website">
+                        <input type="hidden" name="_next" value="https://walkersedgefarm.github.io/thank-you.html">
+                        <input type="hidden" name="_autoresponse" value="Thank you for your egg order! We'll contact you shortly to confirm.">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
                         <div>
                             <label for="name" class="block text-gray-700 mb-1">Full Name</label>
                             <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
@@ -360,6 +363,9 @@
                 </div>
                 <div class="lg:w-1/2">
                     <div class="bg-green-50 p-8 rounded-lg h-full">
+                        <div class="mb-6 w-full h-64 overflow-hidden rounded-lg">
+                            <img src="https://github.com/walkersedgefarm/walkersedgefarm.github.io/blob/main/Central%20Peck.jpg?raw=true" alt="Central Peck" class="w-full h-full object-cover">
+                        </div>
                         <h3 class="text-2xl font-semibold mb-4 text-green-700">Egg Order Information</h3>
                         <div class="space-y-4">
                             <div class="flex items-start">
@@ -573,72 +579,32 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Form submission handler
-        function submitOrder(paymentMethod) {
-            const form = document.getElementById('egg-order-form');
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const eggType = document.getElementById('egg-type').value;
-            const quantity = document.getElementById('quantity').value;
-            const notes = document.getElementById('notes').value;
-            const isDelivery = document.getElementById('delivery-toggle').checked;
-            const date = isDelivery ? document.getElementById('delivery-date').value : document.getElementById('pickup-date').value;
-            
-            if(name && email && eggType && quantity) {
-                // Create hidden form to submit via formsubmit
-                const emailForm = document.createElement('form');
-                emailForm.action = 'https://formsubmit.co/walkersedgefarm@gmail.com';
-                emailForm.method = 'POST';
-                
-                // Add hidden inputs
-                const addInput = (name, value) => {
-                    const input = document.createElement('input');
-                    input.type = 'hidden';
-                    input.name = name;
-                    input.value = value;
-                    emailForm.appendChild(input);
-                };
-                
-                addInput('_subject', `New ${paymentMethod} Egg Order - ${name}`);
-                addInput('_replyto', email);
-                addInput('name', name);
-                addInput('email', email);
-                addInput('phone', phone || 'Not provided');
-                addInput('Egg Type', eggType);
-                addInput('Quantity', quantity);
-                addInput('Delivery Method', isDelivery ? 'Delivery' : 'Pickup');
-                addInput('Date', date);
-                addInput('Payment Method', paymentMethod);
-                addInput('Notes', notes || 'None');
-                addInput('_next', window.location.href); // Redirect back to order page after submission
-                
-                // Append and submit form
-                document.body.appendChild(emailForm);
-                emailForm.submit();
-                document.body.removeChild(emailForm);
-                
-                // Show confirmation
-                alert(`Thank you, ${name}! Your ${paymentMethod} order for ${quantity} ${eggType} has been received. We'll contact you to confirm.`);
-                
-                // Reset form
-                form.reset();
-            } else {
-                alert('Please fill out all required fields.');
-            }
-        }
-
-        // Form submission handlers
+        // Form validation
         document.getElementById('egg-order-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            submitOrder('Cash');
-        });
-
-        // PayPal button handler - submits form via formsubmit before redirecting
-        document.querySelector('a[href*="paypal"]').addEventListener('click', function(e) {
-            e.preventDefault();
-            submitOrder('PayPal');
-            window.open(this.href, '_blank');
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const quantity = document.getElementById('quantity').value;
+            
+            if(!name || !email) {
+                e.preventDefault();
+                alert('Please fill out all required fields (Name and Email).');
+                return false;
+            }
+            
+            if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            
+            if(quantity < 1 || quantity > 10) {
+                e.preventDefault();
+                alert('Please enter a quantity between 1 and 10.');
+                return false;
+            }
+            
+            return true;
         });
 
         // Set minimum date for order pickup/delivery (tomorrow)
