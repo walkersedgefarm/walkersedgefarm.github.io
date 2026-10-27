@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Fresh Eggs | Walker's Edge Farm</title>
+<meta name="description" content="Order pasture-raised chicken and duck eggs from Walker's Edge Farm for pickup in Louisburg, KS. Pay at pickup with cash, Venmo, or PayPal.">
+<link rel="canonical" href="https://walkersedgefarm.com/order.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Order Fresh Eggs | Walker's Edge Farm">
+<meta property="og:description" content="Order pasture-raised chicken and duck eggs from Walker's Edge Farm for pickup in Louisburg, KS. Pay at pickup with cash, Venmo, or PayPal.">
+<meta property="og:image" content="https://walkersedgefarm.com/img/eggs.jpg">
+<meta property="og:url" content="https://walkersedgefarm.com/order.html">
+<meta name="theme-color" content="#1c1916">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..700,50&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Walker's Edge Farm home"><img src="img/favicon.png" alt="" width="40" height="40"><span>Walker&rsquo;s Edge Farm</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg> Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main"><a href="index.html">Home</a><a href="animals.html">Animals</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="btn btn--copper" href="order.html" aria-current="page">Order Eggs</a></nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-head"><div class="wrap"><p class="eyebrow">Order eggs</p><h1>Fresh eggs, ready for pickup</h1><p>Choose your eggs and a pickup day. We&rsquo;ll email or text to confirm within 24 hours. No payment needed until pickup.</p></div></section>
+<section class="section">
+  <div class="wrap order-layout">
+    <form class="form-card" id="egg-order-form" action="https://formsubmit.co/walkersedgefarm@gmail.com" method="POST" novalidate>
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="New egg order from the website">
+      <input type="hidden" name="_next" value="https://walkersedgefarm.com/thank-you.html?type=order">
+      <input type="hidden" name="_autoresponse" value="Thank you for your egg order from Walker's Edge Farm. We'll contact you within 24 hours to confirm your pickup time.">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="estimated-total" id="total-field" value="$5">
+
+      <h2 style="font-size:1.5rem">1. Choose your eggs</h2>
+      <div class="choice-group" role="radiogroup" aria-label="Egg type" style="margin-bottom:1.25rem">
+        <label class="choice"><input type="radio" name="egg-type" value="Chicken eggs (dozen)" data-price="5" checked> Chicken eggs <span class="hint">dozen</span><span class="choice-price">$5</span></label>
+        <label class="choice"><input type="radio" name="egg-type" value="Duck eggs (half dozen)" data-price="6"> Duck eggs <span class="hint">half dozen</span><span class="choice-price">$6</span></label>
+        <label class="choice"><input type="radio" name="egg-type" value="Mixed dozen (chicken and duck)" data-price="8"> Mixed dozen <span class="hint">chicken &amp; duck</span><span class="choice-price">$8</span></label>
+      </div>
+      <div style="display:flex;align-items:end;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+        <div><label for="quantity">Quantity <span class="hint">(up to 10)</span></label>
+        <div class="qty"><button type="button" data-step="-1" aria-label="Decrease quantity">&minus;</button><input type="number" id="quantity" name="quantity" value="1" min="1" max="10" inputmode="numeric"><button type="button" data-step="1" aria-label="Increase quantity">+</button></div></div>
+      </div>
+      <div class="total"><span class="muted">Estimated total, paid at pickup</span><strong id="total">$5</strong></div>
+
+      <h2 style="font-size:1.5rem;margin-top:1.25rem">2. Pickup or delivery</h2>
+      <div class="choice-row" style="margin-bottom:1.1rem">
+        <label class="choice"><input type="radio" name="fulfillment" value="Farm pickup" checked> Farm pickup</label>
+        <label class="choice"><input type="radio" name="fulfillment" value="Delivery requested"> Request delivery</label>
+      </div>
+      <div class="form-grid">
+        <div class="full"><label for="pickup-date"><span id="date-label">Preferred pickup date</span> <span class="req">*</span></label><input type="date" id="pickup-date" name="preferred-date" required>
+        <p class="hint" id="date-hint" style="margin:.4rem 0 0">Pickup hours: Mon&ndash;Fri 5&ndash;7 pm, Sat&ndash;Sun 9 am&ndash;noon.</p></div>
+        <div class="full" id="address-wrap" hidden><label for="address">Delivery address <span class="req">*</span></label><input type="text" id="address" name="delivery-address" autocomplete="street-address"><p class="hint" style="margin:.4rem 0 0">Delivery depends on distance. We&rsquo;ll let you know if we can deliver.</p></div>
+      </div>
+
+      <h2 style="font-size:1.5rem;margin-top:2rem">3. Your details</h2>
+      <div class="form-grid">
+        <div class="full"><label for="name">Full name <span class="req">*</span></label><input type="text" id="name" name="name" autocomplete="name" required></div>
+        <div><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" autocomplete="email" required></div>
+        <div><label for="phone">Phone <span class="hint">(optional)</span></label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+        <div class="full"><label for="notes">Special requests <span class="hint">(optional)</span></label><textarea id="notes" name="notes" placeholder="Egg colors, standing weekly order, best time to reach you&hellip;"></textarea></div>
+      </div>
+      <p class="form-error" id="form-error" role="alert" style="color:#a3361f;font-size:var(--text-sm);margin:1rem 0 0" hidden></p>
+      <button class="btn btn--copper btn--block" type="submit" style="margin-top:1.25rem;padding-block:1rem;font-size:1rem">Place egg order</button>
+      <p class="form-note">You&rsquo;ll pay at pickup with cash, Venmo, or PayPal.</p>
+    </form>
+
+    <aside class="info-stack" aria-label="Order information">
+      <div class="info"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Pickup hours</h3>
+        <table class="hours"><tr><td>Monday&ndash;Friday</td><td>5&ndash;7 pm</td></tr><tr><td>Saturday</td><td>9 am&ndash;noon</td></tr><tr><td>Sunday</td><td>9 am&ndash;noon</td></tr></table></div>
+      <div class="info"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Pickup location</h3><p>Walker&rsquo;s Edge Farm<br>4120 West 295th Street<br>Louisburg, KS 66053</p><p><a href="https://www.google.com/maps/search/?api=1&query=4120+W+295th+St+Louisburg+KS+66053">Get directions</a></p></div>
+      <div class="info"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12.5h2M3 10h18"/></svg> Payment</h3><p>Cash, Venmo, or PayPal at pickup. Prefer to pay ahead?</p><p><a class="btn btn--ghost" href="https://www.paypal.com/ncp/payment/MYETDXRGGTS4J" style="margin-top:.25rem">Pay with PayPal</a></p></div>
+      <div class="info"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3.5 0 6.5 5.5 6.5 10a6.5 6.5 0 0 1-13 0C5.5 8.5 8.5 3 12 3z"/></svg> Egg care</h3><p>Our eggs are unwashed to keep their natural protective coating. Refrigerate for the longest shelf life, and rinse just before using.</p></div>
+      <div class="info"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Availability</h3><p>Eggs are available year-round, with the most in spring and summer.</p></div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="img/logo.png" alt="Walker's Edge Farm, established 2024" width="220" height="134" loading="lazy">
+        <p>A family farm in Louisburg, Kansas, raising pasture-raised eggs, heritage livestock, and seasonal produce.</p>
+        <div class="socials"><a href="https://www.instagram.com/walkers_edge_farm" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a><a href="https://www.facebook.com/people/Walkers-Edge-Farm/61564915550157/" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H7v3.5h2V21h3.5v-7.5H15l.5-3.5h-3V7a1 1 0 0 1 1-1H15z"/></svg></a><a href="mailto:walkersedgefarm@gmail.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></div>
+      </div>
+      <div><h2>Visit</h2><ul><li>4120 West 295th Street</li><li>Louisburg, KS 66053</li><li><a href="https://www.google.com/maps/search/?api=1&query=4120+W+295th+St+Louisburg+KS+66053">Get directions</a></li></ul></div>
+      <div><h2>Shop</h2><ul><li><a href="order.html">Order eggs</a></li><li><a href="animals.html#for-sale">Animals for sale</a></li><li><a href="index.html#products">Farm products</a></li></ul></div>
+      <div><h2>Farm</h2><ul><li><a href="about.html">Our story</a></li><li><a href="animals.html#meet">Meet the animals</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>&copy; <span data-year>2026</span> Walker&rsquo;s Edge Farm. All rights reserved.</span><a href="mailto:walkersedgefarm@gmail.com">walkersedgefarm@gmail.com</a></div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
