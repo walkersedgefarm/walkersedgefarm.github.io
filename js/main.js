@@ -77,6 +77,7 @@
       if (!EMAIL_RE.test(email.value.trim())) { e.preventDefault(); return showError(err, 'Please enter a valid email address so we can confirm your order.', email); }
       if (!dateInput.value) { e.preventDefault(); return showError(err, 'Please choose a preferred date.', dateInput); }
       if (dateInput.value < iso) { e.preventDefault(); return showError(err, 'Please choose a date starting tomorrow.', dateInput); }
+      if (!addr.required && new Date(dateInput.value + 'T12:00').getDay() === 0) { e.preventDefault(); return showError(err, 'We\'re closed for pickup on Sundays. Please choose another day.', dateInput); }
       if (addr.required && !addr.value.trim()) { e.preventDefault(); return showError(err, 'Please enter a delivery address.', addr); }
       clampQty(); update();
     });
@@ -112,7 +113,7 @@
     var type = new URLSearchParams(location.search).get('type');
     if (type === 'order') {
       tt.textContent = 'Thank you for your egg order';
-      document.getElementById('thanks-body').textContent = "We'll contact you within 24 hours to confirm your pickup time. Check your email for a confirmation.";
+      document.getElementById('thanks-body').textContent = "We'll contact you within 24 hours to confirm your pickup or delivery time. Check your email for a confirmation.";
     } else if (type === 'message') {
       tt.textContent = 'Thanks for reaching out';
       document.getElementById('thanks-body').textContent = "We'll reply within 24 hours.";
